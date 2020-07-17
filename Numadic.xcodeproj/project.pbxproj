@@ -13,7 +13,7 @@
 		34820B4C24C204F800DA0D30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34820B4A24C204F800DA0D30 /* Main.storyboard */; };
 		34820B4E24C204FC00DA0D30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34820B4D24C204FC00DA0D30 /* Assets.xcassets */; };
 		34820B5124C204FC00DA0D30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34820B4F24C204FC00DA0D30 /* LaunchScreen.storyboard */; };
-		34820B5C24C22A0B00DA0D30 /* CaptureMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34820B5B24C22A0B00DA0D30 /* CaptureMode.swift */; };
+		34820B5C24C22A0B00DA0D30 /* CaptureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34820B5B24C22A0B00DA0D30 /* CaptureModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		34820B4D24C204FC00DA0D30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34820B5024C204FC00DA0D30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34820B5224C204FC00DA0D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34820B5B24C22A0B00DA0D30 /* CaptureMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureMode.swift; sourceTree = "<group>"; };
+		34820B5B24C22A0B00DA0D30 /* CaptureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,7 @@
 		34820B5A24C229B900DA0D30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				34820B5B24C22A0B00DA0D30 /* CaptureMode.swift */,
+				34820B5B24C22A0B00DA0D30 /* CaptureModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34820B4924C204F800DA0D30 /* EntryViewController.swift in Sources */,
-				34820B5C24C22A0B00DA0D30 /* CaptureMode.swift in Sources */,
+				34820B5C24C22A0B00DA0D30 /* CaptureModel.swift in Sources */,
 				34820B4524C204F800DA0D30 /* AppDelegate.swift in Sources */,
 				34820B4724C204F800DA0D30 /* SceneDelegate.swift in Sources */,
 			);

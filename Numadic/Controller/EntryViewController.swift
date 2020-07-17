@@ -34,7 +34,10 @@ extension EntryViewController: CLLocationManagerDelegate{
             let lon = location.coordinate.longitude
             print("Got Location\nLatitude:\(lat)\nLongitude:\(lon)")
             if let safeLocation = locationManager.location{
-                print("Speed = \(String(describing: safeLocation.speed))")
+                speed = safeLocation.speed
+                print("Speed in m/s= \(String(describing: speed))")
+                let speedInKmph = speed * 3.6
+                print("Speed in km/h= \(String(describing: speedInKmph))")
             }
         }
     }

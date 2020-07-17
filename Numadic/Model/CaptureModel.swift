@@ -9,8 +9,9 @@
 import Foundation
 import CoreLocation
 
-class CaptureMode {
-    func captureLocationInActiveMode() {
+struct CaptureModel {
+    var lattitude:CLLocationDegrees , longitude : CLLocationDegrees
+    func captureLocationInActiveMode(_ speed: CLLocationSpeed) {
     }
     func captureLocationInIdleMode() {
     }
