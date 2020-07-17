@@ -15,19 +15,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVg-Dt-XX9">
-                                <rect key="frame" x="151" y="430" width="112" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Start Service"/>
-                                <connections>
-                                    <action selector="startServicePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="15p-GM-6D8"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ecb-0u-ZMA">
+                                <rect key="frame" x="131" y="371.5" width="152" height="153"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVg-Dt-XX9">
+                                        <rect key="frame" x="20" y="0.0" width="112" height="66.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Start Service"/>
+                                        <connections>
+                                            <action selector="startServicePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="15p-GM-6D8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d7C-y4-bBn">
+                                        <rect key="frame" x="21" y="86.5" width="110" height="66.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Stop Service"/>
+                                        <connections>
+                                            <action selector="stopServicePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cpz-PC-sf5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="wVg-Dt-XX9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6EN-m3-Ksb"/>
-                            <constraint firstItem="wVg-Dt-XX9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GcZ-wF-svQ"/>
+                            <constraint firstItem="ecb-0u-ZMA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R8X-Vk-sgd"/>
+                            <constraint firstItem="ecb-0u-ZMA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jBN-o4-zyq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

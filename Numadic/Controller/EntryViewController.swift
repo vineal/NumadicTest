@@ -11,27 +11,35 @@ import CoreLocation
 
 class EntryViewController: UIViewController {
     let locationManager = CLLocationManager()
+    var speed = CLLocationSpeed()
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
     }
     @IBAction func startServicePressed(_ sender: UIButton) {
-        locationManager.requestLocation()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startUpdatingLocation()
+    }
+    @IBAction func stopServicePressed(_ sender: UIButton) {
+        locationManager.stopUpdatingLocation()
     }
 }
 
-//MARK: - CLLocationManagerDelagate
+//MARK: - CLLocationManagerDelegate
 extension EntryViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
-            locationManager.stopUpdatingLocation()
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
             print("Got Location\nLatitude:\(lat)\nLongitude:\(lon)")
+            if let safeLocation = locationManager.location{
+                print("Speed = \(String(describing: safeLocation.speed))")
+            }
         }
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Error:\(error)")
+        print("Error:\(error.localizedDescription)")
     }
+    
 }
